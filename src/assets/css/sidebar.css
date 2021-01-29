@@ -1,0 +1,13 @@
+.w-22{
+    width: 22px;
+}
+.h-22{
+    height:22px !important;
+}
+#show{
+    display: block;
+}
+#icon1{
+    transition: 0.3s;
+    padding: 5px;
+}

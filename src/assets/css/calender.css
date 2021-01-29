@@ -1,0 +1,15 @@
+.color {
+  padding: 100px;
+  color: red;
+}
+.wrapper{
+    display: flex;
+    background-color: rgb(138, 121, 121);
+    justify-content: center;
+    align-items: center;
+
+}
+.calendar{
+    margin: auto;
+    background-color: #fff;
+}
