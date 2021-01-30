@@ -22,7 +22,7 @@ export default function sidebar(){
       }
     return (
    <div >
-    <div className="col-md-3 p-0 bg-white rounded">
+    <div className="col-md-3 p-0 bg-white rounded pl-2 pr-2">
 {/*Calender Code start*/}
 
 <Mycalendar/>
