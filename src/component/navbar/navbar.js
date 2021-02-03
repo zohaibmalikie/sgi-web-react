@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../sidebar/sidebar';
+
 import  '../../assets/css/navbar.css'
 import Logo from '../../assets/image/logo.png'
 import Message from '../../assets/image/icon-2.png'
@@ -9,7 +9,8 @@ import Face from '../../assets/image/face-01.png'
 // import  '../../assets/image/'
 export default function navbar() {
     return (
-      <div className="bg-color-gray container-fluid pl-5 pr-5">
+     <React.Fragment>
+ <div className="">
       <nav className="navbar navbar-expand-lg navbar-light pl-0 pr-0">
   <a className="navbar-brand col-md-2-change" href="#"><img  src={Logo} alt="..." className="h-54 img-fluid"></img></a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +67,8 @@ export default function navbar() {
 </div>
 
 </div>
-<Sidebar />
+
 </div>  
+     </React.Fragment>
     )
 }

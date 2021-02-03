@@ -5,24 +5,24 @@ import '../../assets/css/calender.css'
 
 export default function Calender() {
     const [monthTOChnage,setMonthChanged]=useState('')
-    const [monthNumber, setMonthNumber] = useState('')
+    const [monthNumber, setMonthNumber] = useState(1)
    
 useEffect(() => {
-    let dd = (new Date().getMonth()+1 )
+    let dd = (new Date().getMonth() )
    setMonthNumber(dd)
-// alert('ddd')
-}, [])
-console.log((new Date().getMonth()));
+// alert(monthNumber)
+}, [1])
+// console.log((new Date().getMonth()));
 
     var dt = new Date()
     // date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
 
     //   Last Month Days
-    var prevDay = dt.getDay()-1;
+    var prevDay = dt.getDay();
     var nextDay = dt.getDay();
 
-    //   console.log(prevDay);
+      console.log(prevDay);
      
      
      //  Current Month Days
@@ -49,6 +49,7 @@ let monthNames = ["January", "February", "March", "April", "May", "June", "July"
 let monthName = monthNames[monthNumber];
 useEffect(() => {
     setMonthChanged(monthName)
+    console.log(monthName);
 }, [])
 
 // Days Code
@@ -123,19 +124,18 @@ else if (value=='next'){
     }
     // dt.setMonth(dt.getMonth()+1);
     let monthNameNext = monthNames[monthNumber]; 
-    
     setMonthChanged(monthNameNext);
-    
 }
 else{
     console.log('condition false');
-
 }
 
 }
 // console.log(changeMonth);
 
 return (
+<React.Fragment>
+
 <div className="wrapper container-fluid pt-4">
     <div className="calendar">
         <div className="month">
@@ -148,7 +148,7 @@ return (
            
             <div className="triggers lightgray">
                 <span className="fa fa-chevron-left prev" onClick={(e)=>changeMonth('prev')}></span>
-                &nbsp; &nbsp;
+               
                 <span className="fa fa-chevron-right next" onClick={(e)=>changeMonth('next')}></span>
             </div>
         </div>
@@ -171,6 +171,7 @@ return (
     </div>
 
 </div>
+</React.Fragment>
     )
 
 }

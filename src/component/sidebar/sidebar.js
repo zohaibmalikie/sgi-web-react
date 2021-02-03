@@ -21,15 +21,15 @@ export default function sidebar(){
         }
       }
     return (
-   <div >
-    <div className="col-md-3 p-0 bg-white rounded pl-2 pr-2">
+   <React.Fragment >
+    <div className="col-md-3 bg-white rounded pl-2 pr-2">
 {/*Calender Code start*/}
 
 <Mycalendar/>
 {/*Calender Code end*/}
 <br/>
 
-          <hr/>
+          <hr className="ml-3 mr-3 mt-0"/>
           <div className="pt-4 pl-3">
               <img src={Dashboard} alt="..." className="img-fluid w-22"></img>
               <span>&nbsp; &nbsp; &nbsp;Dashboard</span>
@@ -54,7 +54,7 @@ export default function sidebar(){
           </div>
         </div>
     </div>
-   </div>
+   </React.Fragment>
     )
 }
 
